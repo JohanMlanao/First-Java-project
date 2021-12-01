@@ -40,11 +40,10 @@ public class Main {
                 System.out.println("Enter a correct number");
                 break;
         }
-
         int result_X;
         int result_O;
         int impossible;
-        String str;
+        int full_case;
 
         do {
             boolean isNumeric = false;//This will be set to true when numeric val entered
@@ -100,7 +99,8 @@ public class Main {
             result_X = 0;
             result_O = 0;
             impossible = 0;
-            str = "";
+            full_case = 9;
+
             for (int i = 0; i < 3; i += 1) {
                 if (tto[i][0] + tto[i][1] + tto[i][2] == 264 || tto[0][i] + tto[1][i] + tto[2][i] == 264) {
                     result_X += 1;
@@ -117,17 +117,19 @@ public class Main {
                 System.out.println("Impossible");
                 impossible += 1;
             }
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    if (tto[i][j] == '_' || tto[i][j] == ' ') {
+                        full_case -= 1;
+                    }
+                }
+            }
             if (turn == 'X') {
                 turn = 'O';
             } else {
                 turn = 'X';
             }
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < 3; j++) {
-                    str += tto[i][i];
-                }
-            }
-        } while (result_X != 1 && result_O != 1 && impossible != 1 && (str.contains("_") || str.contains(" ")));
+        } while (result_X != 1 && result_O != 1 && impossible != 1 && full_case < 9 );
 
         if (result_X == 1) {
             System.out.println("X wins");
@@ -138,4 +140,3 @@ public class Main {
         }
     }
 }
-
