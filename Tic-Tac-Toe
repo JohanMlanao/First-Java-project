@@ -25,21 +25,6 @@ public class Main {
         tto[2][1] = user_input.charAt(7);
         tto[2][2] = user_input.charAt(8);
 
-        System.out.println("Who starts ?");
-        System.out.println("1 - X, 2 - O");
-        int choice = sc.nextInt();
-        char turn = ' ';
-        switch (choice) {
-            case 1:
-                turn = 'X';
-                break;
-            case 2:
-                turn = 'O';
-                break;
-            default:
-                System.out.println("Enter a correct number");
-                break;
-        }
         int result_X;
         int result_O;
         int impossible;
