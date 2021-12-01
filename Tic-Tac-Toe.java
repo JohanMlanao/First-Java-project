@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String user_input = "         ";
+        char turn = 'X';
 
         System.out.println("---------");
         System.out.println("| " + user_input.charAt(0) + " " + user_input.charAt(1) + " " + user_input.charAt(2) + " |");
