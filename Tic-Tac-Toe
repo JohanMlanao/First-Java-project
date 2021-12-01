@@ -56,14 +56,12 @@ public class Main {
                     System.out.print("Enter the coordinates: ");
                     row = sc.nextInt();
                     col = sc.nextInt();
-                    while (row < 1 || row > 3 || col < 1 || col > 3) {
-                        System.out.println("Coordinates should be from 1 to 3");
-                        System.out.print("Enter the coordinates: ");
-                        row = sc.nextInt();
-                        col = sc.nextInt();
-                    }
-                    while (tto[row - 1][col - 1] != '_' && tto[row - 1][col - 1] != ' ') {
-                        System.out.println("This cell is occupied! Choose another one!");
+                    while (row < 1 || row > 3 || col < 1 || col > 3 || (tto[row - 1][col - 1] != '_' && tto[row - 1][col - 1] != ' ')) {
+                        if (row < 1 || row > 3 || col < 1 || col > 3 ) {
+                            System.out.println("Coordinates should be from 1 to 3");
+                        } else {
+                            System.out.println("This cell is occupied! Choose another one!");
+                        }
                         System.out.print("Enter the coordinates: ");
                         row = sc.nextInt();
                         col = sc.nextInt();
