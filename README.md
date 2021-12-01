@@ -1,4 +1,4 @@
 # Java-projects
 My projects in Java
 
-The goal of this project was to create a simple tic-tac-toe with Java.
+The aim of this project is to program various things in order to refine my understanding of Java.
