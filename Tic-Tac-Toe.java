@@ -1,4 +1,8 @@
-package tictactoe;
+/* A tic-tac-toe game made with JetBrains Academy
+
+package tictactoe;*/
+
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
